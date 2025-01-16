@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+<script defer src="main.js"></script></head>
+<body>
+    <header id="header">
+        <section id="header-side-panel">
+            <h2 id="to-do">Your To-Do List</h2>
+        </section>
+    </header>
+    <main id="main">
+        <section id="side-panel">
+            <div id="project-side-panel">
+                <h4 id="project-side-header">Your Projects</h4>
+                <ul id="project-list">
+                    <li id="all-projects">All projects</li>
+                    <!--Added dynamically by JS-->
+                </ul>
+            </div>
+            <div id="task-side-panel">
+                <h4 id="task-side-header">Tasks</h4>
+                <ul id="task-list">
+                    <li id="all-tasks">All tasks</li>
+                    <li id="today-tasks">Today's tasks</li>
+                    <li id="high-tasks">High Priority</li>
+                    <li id="least-tasks">Least Priority</li>
+                </ul>
+            </div>
+        </section>
+        <div class="project-plus-header">
+            <section id="header-project-panel">
+                <h3 id="project-header">Your Projects</h3>
+                <button id="add-project">+</button>
+            </section>
+            <section id="project-panel">
+
+            </section>
+        </div>
+        <div class="task-plus-header">
+            <section id="header-task-panel">
+                <h3 id="task-header">Your Tasks</h3>
+                <button id="add-task">+</button>
+            </section>
+            <section id="task-panel">
+
+            </section>
+        </div>
+        <dialog id="task-dialog">
+            <form method="dialog">
+                <p>
+                    <label>
+                        Task Name
+                        <input id="task-name" type="text" required />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Description
+                        <input id="task-description" type="text" />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Due Date
+                        <input id="task-date" type="date" required />
+                    </label>
+                </p>
+                <p>
+                    <label for="task-priority">
+                        priority
+                        <select id="task-priority" name="priority" required >
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </label>
+                </p>
+                <div>
+                    <button value="default" id="submit-task">Submit</button>
+                </div>
+            </form>
+        </dialog>
+        <dialog id="project-dialog">
+            <form method="dialog">
+                <p>
+                    <label>
+                        Project Name
+                        <input id="project-name" type="text" required />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Project Description
+                        <input id="project-description" type="textarea" />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Project start date
+                        <input id="project-start-date" type="date" />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Project End date
+                        <input id="project-end-date" type="date" required />
+                    </label>
+                </p>
+                <p>
+                    <label for="project-priority">
+                        priority
+                        <select id="project-priority" name="project-priority" required >
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Project Status
+                        <input id="project-status" type="text" />
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Notes
+                        <input id="project-notes" type="textarea" />
+                    </label>
+                </p>
+                <div>
+                    <button value="default" id="submit-project">Submit</button>
+                </div>
+            </form>
+        </dialog>
+    </main>
+    <footer id="footer">
+        <p>&copy; 2025</p>
+        <p>Created by Banele Luthuli</p>
+    </footer>
+    
+</body>
+</html>
